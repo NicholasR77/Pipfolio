@@ -62,6 +62,10 @@ p:last-child:after {
     z-index: 2;
 }
 
+.job-detail {
+    padding-top: 20px;
+}
+
 .job-detail .roles-detail {
     border-bottom: var(--primary-color) solid 2px;
 }

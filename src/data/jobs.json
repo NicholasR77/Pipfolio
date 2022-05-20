@@ -51,52 +51,75 @@
     },
     "cli": {
         "name": "CLI",
-        "description": "Test descriptions",
+        "description": "A progressive full-service branding, software development and digital advertising agency.",
         "roles": [
             {
-                "title": "Junior Developer",
-                "dates": "2017-2018",
+                "title": "Frontend Developer",
+                "dates": "Mar 2016 - May 2019",
                 "descriptions": [
-                    "Developed a web application for a client using AngularJS, NodeJS, ExpressJS, MongoDB, and Mongoose."
+                    "Added responsive styling utilizing CSS3 via a combination of Sass as a preprocessor and Grunt as a task runner.",
+                    "Created UI/UX and frontend element interactions utilizing JavaScript and jQuery.",
+                    "Collaborated with designers to create clean interfaces and simple, intuitive interactions and experiences.",
+                    "Developed and implemented SEO strategies to increase brand recognition and website traffic."
+                ]
+            },
+            {
+                "title": "Project Manager",
+                "dates": "Dec 2017 - Sep 2018",
+                "descriptions": [
+                    "Gathered client business requirements through interviews, document analysis, and workflow review, ensuring business needs were effectively identified, for 4 retainer clients as well as all newly on-boarded clients.",
+                    "Translated and prioritized requirements into detailed but simple technical scope or business cases.",
+                    "Generated test cases and ran test scenarios through manual testing while facilitating necessary changes in the project to meet client business requirements.",
+                    "Managed communication between client, development team, and development support team."
                 ]
             }
         ]
     },
     "uhaul": {
-        "name": "uhaul",
-        "description": "Test descriptions",
+        "name": "U-Haul International, Inc.",
+        "description": "A moving equipment and storage rental company.",
         "roles": [
             {
-                "title": "Junior Developer",
-                "dates": "2017-2018",
+                "title": "Technical Writer",
+                "dates": "Sep 2018 - Nov 2018",
                 "descriptions": [
-                    "Developed a web application for a client using AngularJS, NodeJS, ExpressJS, MongoDB, and Mongoose."
+                    "Researched and documented business rules, user guides, testing scripts, field manuals, technical rules and requirements, development rules, release notes, and anything else associated with TW WR documentation.",
+                    "Conducted business group and user analysis for technical and business documentation.",
+                    "Managed document repository updates, revisions, and general maintenance through Confluence."
                 ]
             }
         ]
     },
     "apple": {
-        "name": "apple",
-        "description": "Test descriptions",
+        "name": "Apple",
+        "description": "A technology company that specializes in consumer electronics, software and online services",
         "roles": [
             {
-                "title": "Junior Developer",
-                "dates": "2017-2018",
+                "title": "Customer Representative, College Program",
+                "dates": "Sep 2015 - Mar 2016",
                 "descriptions": [
-                    "Developed a web application for a client using AngularJS, NodeJS, ExpressJS, MongoDB, and Mongoose."
+                    "Provided exceptional customer service while solving customer issues in a timely manner.",
+                    "Maintained high customer satisfaction records of 95% while seeking new ways to improve overall service.",
+                    "Supported wireless carrier reps in activating new accounts and correcting service on existing products.",
+                    "Transferred customers to the appropriate department or wireless carrier when necessary to ensure timely resolution.",
+                    "Offered support options to ineligible customers to increase customer satisfaction."
                 ]
             }
         ]
     },
     "mjs": {
-        "name": "mjs",
-        "description": "Test descriptions",
+        "name": "MJS Designs, Inc.",
+        "description": "A leading electronics manufacturing services provider specializing in Printed Circuit Boards (PCBs).",
         "roles": [
             {
-                "title": "Junior Developer",
-                "dates": "2017-2018",
+                "title": "Automated Optical Inspection (AOI) Programmer",
+                "dates": "Aug 2014 - Aug 2015",
                 "descriptions": [
-                    "Developed a web application for a client using AngularJS, NodeJS, ExpressJS, MongoDB, and Mongoose."
+                    "Designed and developed AOI/surface mount technology (SMT) programs and supported AOI/SMT operations.",
+                    "Prepared and created computer-aided design utility files, and implemented maintenance, troubleshooting, and resolution of AOI systems.",
+                    "Performed mechanical, functional inspection, and testing tasks with strict attention to detail.",
+                    "Conducted weekly training sessions for AOI systems operation, and formulated operating instructions and inspection checkpoints.",
+                    "Developed and executed functional test activities and test processes, and resolved testing problems, including system malfunctions and data interpretation."
                 ]
             }
         ]
