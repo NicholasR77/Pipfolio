@@ -1,26 +1,104 @@
 {
     "default": {
         "name": "Default",
-        "description": "Default"
+        "description": "Default",
+        "roles": [
+            {
+                "title": "Default",
+                "dates": "Default",
+                "descriptions": []
+            }
+        ]
     },
     "roll20": {
         "name": "Roll20",
-        "description": "Rolls a dice with the given number of sides."
+        "description": "An online platform and companion mobile app for tabletop game management.",
+        "roles": [
+            {
+                "title": "Junior Software Developer",
+                "dates": "Oct 2020 - Current",
+                "descriptions": [
+                    "Worked on implementing Roll20's first Node.js/Express microservice via TypeScript/JavaScript and Mongo/Mongoose. Included a flexible GraphQLAPI, Atlas search integration, authorization with OAuth/OpenID via our Hydra auth server, and data importing from a legacy Postgres database.",
+                    "Converted legacy permissions from scattered, disparate permissions across multiple Postgres tables into one polymorphic Postgres table for easier access, better testability in RSpec, and to offer a single source of truth.",
+                    "Integrated new Cypress end to end test suites across a variety of Roll20 features. Updated the primary codebase Rpsec testing setup for organization and efficiency.",
+                    "Developed the first iteration of the Dungeons and Dragons mobile character sheet for the Roll20 mobile app beta.",
+                    "Converted key Roll20 compendium pages from legacy Erb/Haml code to modern Javascript via Vue, Vuex, and Vue Router.",
+                    "Stepped in as a temporary Product Owner and assisted with roadmap development, critical project execution, and daily team management.",
+                    "Worked alongside various cross-functional teams to develop any other features, functions, and bug fixes needed for the Roll20 platform, both inside and outside the Virtual Tabletop",
+                    "Assisted various non-technical teams and team members in project ideation, bug reporting, and general support."
+                ]
+            },
+            {
+                "title": "Customer Support Team Lead",
+                "dates": "Aug 2020 - Oct 2020",
+                "descriptions": [
+                    "Lead a team of several customer representatives in managing Roll20's various support channels.",
+                    "Reviewed various customer service analytics (CSAT, SLA, LT) and SOO's and guided team in advancing associated goals.",
+                    "Proposed and managed several vertical and horizontal projects and initiatives including but not limited to Roll20 Help Center improvements and bug troubleshooting process updates."
+                ]
+            },
+            {
+                "title": "Customer Agent",
+                "dates": "May 2019 - Aug 2020",
+                "descriptions": [
+                    "Provided customer service and troubleshooting through a variety of mediums including Jira Service Desk, Roll20 Forums, Twitter, Facebook, and Reddit.",
+                    "Investigated, identified, and reported bugs and errors from Roll20 user base and other end points.",
+                    "Assisted in creating, managing, and maintaining public-facing Roll20 documentation. Supported and processed the transfer of Roll20 documentation from in-house Wiki to Confluence.",
+                    "Provided support wherever and however needed to other internal teams."
+                ]
+            }
+        ]
     },
     "cli": {
         "name": "CLI",
-        "description": "Test description"
+        "description": "Test descriptions",
+        "roles": [
+            {
+                "title": "Junior Developer",
+                "dates": "2017-2018",
+                "descriptions": [
+                    "Developed a web application for a client using AngularJS, NodeJS, ExpressJS, MongoDB, and Mongoose."
+                ]
+            }
+        ]
     },
     "uhaul": {
         "name": "uhaul",
-        "description": "Test description"
+        "description": "Test descriptions",
+        "roles": [
+            {
+                "title": "Junior Developer",
+                "dates": "2017-2018",
+                "descriptions": [
+                    "Developed a web application for a client using AngularJS, NodeJS, ExpressJS, MongoDB, and Mongoose."
+                ]
+            }
+        ]
     },
     "apple": {
         "name": "apple",
-        "description": "Test description"
+        "description": "Test descriptions",
+        "roles": [
+            {
+                "title": "Junior Developer",
+                "dates": "2017-2018",
+                "descriptions": [
+                    "Developed a web application for a client using AngularJS, NodeJS, ExpressJS, MongoDB, and Mongoose."
+                ]
+            }
+        ]
     },
     "mjs": {
         "name": "mjs",
-        "description": "Test description"
+        "description": "Test descriptions",
+        "roles": [
+            {
+                "title": "Junior Developer",
+                "dates": "2017-2018",
+                "descriptions": [
+                    "Developed a web application for a client using AngularJS, NodeJS, ExpressJS, MongoDB, and Mongoose."
+                ]
+            }
+        ]
     }
 }

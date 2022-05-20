@@ -10,10 +10,14 @@ h1, h2, h3, h4, h5, h6, p, a {
     text-decoration: none;
 }
 
+li {
+    padding: 5px 0;
+}
+
 p:last-child:after {
     animation: blink 1s infinite;
     content: "_";
-} */
+}
 
 /* Main Elements */
 .pipfolio-main {
@@ -29,7 +33,7 @@ p:last-child:after {
     box-shadow: 0 0 5vmin 1vmin #000 inset;
     box-sizing: border-box;
     height: 100vh;
-    overflow: hidden;
+    overflow: scroll;
     padding: 10vmin;
     width: 100vw;
 }
@@ -58,6 +62,15 @@ p:last-child:after {
     z-index: 2;
 }
 
+.job-detail .roles-detail {
+    border-bottom: var(--primary-color) solid 2px;
+}
+
+.roles {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
 /* Nav */
 .main-nav {
     padding-bottom: 5px;
@@ -77,7 +90,7 @@ p:last-child:after {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 26px;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 .main-nav ul li:first-child, .sub-nav li {

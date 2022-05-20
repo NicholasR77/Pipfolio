@@ -9,13 +9,36 @@ import Jobs from '../data/jobs.json';
 export default function JobDetails() {
     let { jobName } = useParams();
 
-    const jobs: JobsType = Jobs;
+    if (jobName === undefined) {
+        return null;
+    }
 
-    const currentJob = jobName ? jobs[jobName] : jobs["default"];
+    const jobs: JobsType = Jobs;
+    const job = jobs[jobName];
+    const roleList = job.roles.map(({ title, dates, descriptions }) => {
+        const descriptionList = descriptions.map((description, index) => {
+            return (
+                <li key={description}>{description}</li>
+            )
+        });
+        return (
+            <div className="roles-detail" key={title}>
+                <p>{title} | {dates}</p>
+                <p>Description:</p>
+                <ul>
+                    { descriptionList }
+                </ul>
+            </div>  
+        );
+    });
     
     return (
-        <div>
-            <h2>Hello World - { currentJob.name }</h2>
+        <div className="job-detail">
+            <h2>{ job.name }</h2>
+            <p>{ job.description }</p>
+            <div className='roles'>
+                { roleList }
+            </div>
         </div>
     )
 }
