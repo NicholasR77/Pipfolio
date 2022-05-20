@@ -1,0 +1,26 @@
+{
+    "default": {
+        "name": "Default",
+        "description": "Default"
+    },
+    "roll20": {
+        "name": "Roll20",
+        "description": "Rolls a dice with the given number of sides."
+    },
+    "cli": {
+        "name": "CLI",
+        "description": "Test description"
+    },
+    "uhaul": {
+        "name": "uhaul",
+        "description": "Test description"
+    },
+    "apple": {
+        "name": "apple",
+        "description": "Test description"
+    },
+    "mjs": {
+        "name": "mjs",
+        "description": "Test description"
+    }
+}

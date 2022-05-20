@@ -64,7 +64,7 @@ p:last-child:after {
     border-bottom: var(--primary-color) solid 2px;
 }
 
-.main-nav ul {
+.main-nav ul, .sub-nav ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -73,15 +73,23 @@ p:last-child:after {
     margin: 0;
 }
 
-.main-nav ul li {
+.main-nav ul li, .sub-nav ul li {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 26px;
     padding-left: 10px;
 }
 
-.main-nav ul li:first-child {
+.main-nav ul li:first-child, .sub-nav li {
     padding-left: 0;
+}
+
+.sub-nav ul {
+    justify-content: center;
+}
+
+.sub-nav ul li {
+    font-weight: 500;
 }
 
 /* Animations */
