@@ -10,7 +10,7 @@ export default function Contact() {
 
     if (submitted) {
         setTimeout(() => {
-        navigate('/');
+            navigate('/');
         }, 4000);
     }
 

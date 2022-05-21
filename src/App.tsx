@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter } from "react-router-dom";
+
 import './styles/Pipfolio.css';
 import './styles/App.css';
 
 // Views
+import Loading from './views/Loading';
 import PipfolioMain from './views/PipfolioMain';
 
 export default  function App() {
+  const [ loaded, setLoaded ] = useState(false);
+
+  setTimeout(() => {
+    setLoaded(true);
+  }, 3000);
+
   return (
     <BrowserRouter>
       <div className="App">
-        <PipfolioMain />
+        {!loaded && <Loading />}
+        {loaded &&  <PipfolioMain />}
       </div>
     </BrowserRouter>
   );

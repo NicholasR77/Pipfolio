@@ -1,6 +1,6 @@
 import HomeInfo from '../data/home-info.json';
-
 import { HomeType } from '../types/Home';
+
 
 export default function Home() {
     const homeInfo:HomeType = HomeInfo;
