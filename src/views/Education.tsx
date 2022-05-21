@@ -7,9 +7,9 @@ export default function Education() {
         <div className='education'>
             <SubMenu>
                 <ul>
-                    <li><NavLink className={({ isActive }) => isActive ? 'active-link' : '' } to='asu'>Arizona State University</NavLink></li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'secondary-active-link' : '' } to='asu'>Arizona State University</NavLink></li>
                     <li>|</li>
-                    <li><NavLink className={({ isActive }) => isActive ? 'active-link' : '' } to='flatiron'>Flatiron Schools Bootcamp</NavLink></li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'secondary-active-link' : '' } to='flatiron'>Flatiron Schools Bootcamp</NavLink></li>
                 </ul>
             </SubMenu>
             <Outlet />
