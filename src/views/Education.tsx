@@ -1,4 +1,4 @@
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 import SubMenu from '../components/SubMenu'
 
@@ -7,8 +7,9 @@ export default function Education() {
         <div className='education'>
             <SubMenu>
                 <ul>
-                    <li><Link to='asu'>Arizona State University</Link></li>
-                    <li><Link to='flatiron'>Flatiron Schools Bootcamp</Link></li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'active-link' : '' } to='asu'>Arizona State University</NavLink></li>
+                    <li>|</li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'active-link' : '' } to='flatiron'>Flatiron Schools Bootcamp</NavLink></li>
                 </ul>
             </SubMenu>
             <Outlet />

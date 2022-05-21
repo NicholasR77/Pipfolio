@@ -8,10 +8,14 @@ export default function Experience() {
             <SubMenu>
                 <ul>
                     <li><NavLink className={({ isActive }) => isActive ? 'active-link' : '' } to='roll20'>Roll20</NavLink></li>
-                    <li><NavLink to='cli'>CLI Digital Media</NavLink></li>
-                    <li><NavLink to='uhaul'>U-Haul</NavLink></li>
-                    <li><NavLink to='apple'>Apple</NavLink></li>
-                    <li><NavLink to='mjs'>MJS Designs</NavLink></li>
+                    <li>|</li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'active-link' : '' } to='cli'>CLI Digital Media</NavLink></li>
+                    <li>|</li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'active-link' : '' } to='uhaul'>U-Haul</NavLink></li>
+                    <li>|</li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'active-link' : '' } to='apple'>Apple</NavLink></li>
+                    <li>|</li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'active-link' : '' } to='mjs'>MJS Designs</NavLink></li>
                 </ul>
             </SubMenu>
             <Outlet />

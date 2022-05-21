@@ -1,6 +1,7 @@
 import {
     Routes,
     Route,
+    Navigate
 } from 'react-router-dom';
 
 // Main Views
@@ -24,9 +25,11 @@ export default function PipfolioWindow() {
                     <Route path='/' element={<Home />}></Route>
                     <Route path='bio' element={<Bio />}></Route>
                     <Route path='experience' element={<Experience />}>
+                        <Route index element={<Navigate to="roll20" />} />
                         <Route path=':jobName' element={<JobDetails />} />
                     </Route>
                     <Route path='education' element={<Education />}>
+                        <Route index element={<Navigate to="asu" />} />
                         <Route path=':schoolName' element={<EducationDetails />} />
                     </Route>
                     <Route path='contact' element={<Contact />}></Route>

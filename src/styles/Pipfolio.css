@@ -1,9 +1,10 @@
 :root {
     --primary-color: #00b100;
+    --secondary-color: #222;
 }
 
 /* Fonts */
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, input, button, textarea, label {
     font-family: 'Fira Mono', monospace;
     font-size: 20px;
     color: var(--primary-color);
@@ -34,7 +35,7 @@ p:last-child:after {
     width: 100vw;
 }
 
-.pipfolio-window::before {
+/* .pipfolio-window::before {
     animation: wave 10s infinite ease-in-out;
     content: "";
     height: 20vh;
@@ -43,7 +44,7 @@ p:last-child:after {
     position: absolute;
     right: 0;
     z-index: 1;
-}
+} */
 
 .pipfolio-window::after {
     background-image: linear-gradient(transparent, transparent 3px, #222);
@@ -69,6 +70,53 @@ p:last-child:after {
 .roles {
     padding-top: 10px;
     padding-left: 20px;
+}
+
+/* Buttons */
+
+.btn {
+    width: 200px;
+    height: auto;
+    padding: 10px 20px;
+    border: var(--primary-color) 2px solid;
+    background: #222;
+    color: var(--primary-color);
+}
+
+.btn:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+/* Forms */
+
+.contact-form {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.contact-form__row {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+}
+
+.contact-form__row label, .contact-form__row input, .contact-form__row textarea {
+    width: 100%;
+}
+
+.contact-form__row label {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.contact-form__row input, .contact-form__row textarea {
+    border: var(--primary-color) solid 2px;
+    background: var(--secondary-color);
 }
 
 /* Nav */
@@ -111,22 +159,10 @@ p:last-child:after {
     padding: 5px 10px;
 }
 
-/* .sub-nav .active-link {
+.sub-nav .active-link {
     border: none;
-    z-index: 1;
+    text-decoration: underline;
 }
-
-.sub-nav .active-link::before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 0;
-    height: 2px;
-    width: 120%;
-    background-color: var(--primary-color);
-    z-index: -1;
-} */
 
 /* Animations */
 @keyframes colorPulse {
