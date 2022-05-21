@@ -3,40 +3,47 @@ import { useNavigate } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
-  const form:any = useRef();
-  const navigate = useNavigate();
-  const [ submitted, setSubmitted ] = useState(false);
-  const [ errors, setErrors ] : any[] = useState([]);
+    const form:any = useRef();
+    const navigate = useNavigate();
+    const [ submitted, setSubmitted ] = useState(false);
+    const [ errors, setErrors ] : any[] = useState([]);
 
-  if (submitted) {
-      setTimeout(() => {
+    if (submitted) {
+        setTimeout(() => {
         navigate('/');
-      }, 4000);
-  }
+        }, 4000);
+    }
 
-  const sendEmail = (e: any) => {
-    e.preventDefault();
-    if (
-        process.env.REACT_APP_EMAIL_SERVICE_ID 
-        && process.env.REACT_APP_EMAIL_TEMPLATE_ID 
-        && process.env.REACT_APP_EMAIL_PUBLIC_KEY
-    ) {
-        emailjs.sendForm(
-            process.env.REACT_APP_EMAIL_SERVICE_ID, 
-            process.env.REACT_APP_EMAIL_TEMPLATE_ID, 
-            form.current, 
-            process.env.REACT_APP_EMAIL_PUBLIC_KEY
-        )
-        .then(() => {
-            setSubmitted(true);
-        }, (error) => {
-            setErrors((errors: string[]) => [...errors, error]);
-        });
-    }    
-  };
+    if (errors.length > 0) {
+        console.error(errors);
+    }
+
+    const sendEmail = (e: any) => {
+        e.preventDefault();
+
+        if (
+            process.env.REACT_APP_EMAIL_SERVICE_ID 
+            && process.env.REACT_APP_EMAIL_TEMPLATE_ID 
+            && process.env.REACT_APP_EMAIL_PUBLIC_KEY
+        ) {
+            emailjs.sendForm(
+                process.env.REACT_APP_EMAIL_SERVICE_ID, 
+                process.env.REACT_APP_EMAIL_TEMPLATE_ID, 
+                form.current, 
+                process.env.REACT_APP_EMAIL_PUBLIC_KEY
+            )
+            .then(() => {
+                setSubmitted(true);
+            }, (error) => {
+                setErrors((errors: string[]) => [...errors, error]);
+            });
+        } else {
+            setErrors((errors: string[]) => [...errors, 'Env variable issue.']);
+        }
+    };
 
   return (
-    <div className='contact-form'>
+    <div className='contact-form subpage'>
         {!submitted && !errors.length &&
             <React.Fragment>
                 <h2>Reach Out to Me Directly.</h2>
