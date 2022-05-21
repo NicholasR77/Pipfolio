@@ -1,4 +1,4 @@
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 import SubMenu from '../components/SubMenu'
 
@@ -7,11 +7,11 @@ export default function Experience() {
         <div className='experience'>
             <SubMenu>
                 <ul>
-                    <li><Link to='roll20'>Roll20</Link></li>
-                    <li><Link to='cli'>CLI Digital Media</Link></li>
-                    <li><Link to='uhaul'>U-Haul</Link></li>
-                    <li><Link to='apple'>Apple</Link></li>
-                    <li><Link to='mjs'>MJS Designs</Link></li>
+                    <li><NavLink className={({ isActive }) => isActive ? 'active-link' : '' } to='roll20'>Roll20</NavLink></li>
+                    <li><NavLink to='cli'>CLI Digital Media</NavLink></li>
+                    <li><NavLink to='uhaul'>U-Haul</NavLink></li>
+                    <li><NavLink to='apple'>Apple</NavLink></li>
+                    <li><NavLink to='mjs'>MJS Designs</NavLink></li>
                 </ul>
             </SubMenu>
             <Outlet />

@@ -10,10 +10,6 @@ h1, h2, h3, h4, h5, h6, p, a {
     text-decoration: none;
 }
 
-li {
-    padding: 5px 0;
-}
-
 p:last-child:after {
     animation: blink 1s infinite;
     content: "_";
@@ -62,7 +58,7 @@ p:last-child:after {
     z-index: 2;
 }
 
-.job-detail {
+.subpage {
     padding-top: 20px;
 }
 
@@ -108,6 +104,29 @@ p:last-child:after {
 .sub-nav ul li {
     font-weight: 500;
 }
+
+.active-link {
+    position: relative;
+    border: var(--primary-color) 2px solid;
+    padding: 5px 10px;
+}
+
+/* .sub-nav .active-link {
+    border: none;
+    z-index: 1;
+}
+
+.sub-nav .active-link::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 120%;
+    background-color: var(--primary-color);
+    z-index: -1;
+} */
 
 /* Animations */
 @keyframes colorPulse {

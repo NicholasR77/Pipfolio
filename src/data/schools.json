@@ -1,0 +1,14 @@
+{
+    "asu": {
+        "name": "Arizona State University",
+        "degree": "Bachelors of Science in Technological Entrepreneurship and Management",
+        "dates": "2013 - 2017",
+        "description": "Lorem ipsum"
+    },
+    "flatiron": {
+        "name": "Flatiron Schools Bootcamp",
+        "degree": "Computer Software Engineering",
+        "dates": "2020 - 2021",
+        "description": "Lorem ipsum"
+    }
+}

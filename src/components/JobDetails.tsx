@@ -33,7 +33,7 @@ export default function JobDetails() {
     });
     
     return (
-        <div className="job-detail">
+        <div className="job-detail subpage">
             <h2>{ job.name }</h2>
             <p>{ job.description }</p>
             <div className='roles'>
