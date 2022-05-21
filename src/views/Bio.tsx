@@ -7,14 +7,14 @@ export default function Bio() {
 
     const sectionsList = bio.sections.map((section) => {
         return (
-            <div className="section" key={section}>
+            <div key={section}>
                 <p>{section}</p>
             </div>
         );
     })
 
     return (
-        <div>
+        <div className="bio subpage">
             { sectionsList }
         </div>
     )
