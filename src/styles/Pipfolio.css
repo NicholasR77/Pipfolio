@@ -12,6 +12,12 @@ h1, h2, h3, h4, h5, h6, p, a, input, button, textarea, label, li {
     text-decoration: none;
 }
 
+h1, h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 .cursor_blink::after {
     animation: blink 1s infinite;
     content: "_";
@@ -62,10 +68,6 @@ h1, h2, h3, h4, h5, h6, p, a, input, button, textarea, label, li {
     background-color: #000;
 }
 
-#loading.transition::before {
-    animation: wave 3s infinite ease-in-out;
-}
-
 .pipfolio-window::after, .loading::after {
     background-image: linear-gradient(transparent, transparent 3px, #222);
     background-size: 4px 4px;
@@ -87,6 +89,10 @@ h1, h2, h3, h4, h5, h6, p, a, input, button, textarea, label, li {
     border-bottom: var(--primary-color) solid 2px;
 }
 
+.job-detail .roles-detail:last-child {
+    border-bottom: none;
+}
+
 .roles {
     padding-top: 10px;
     padding-left: 20px;
@@ -94,6 +100,36 @@ h1, h2, h3, h4, h5, h6, p, a, input, button, textarea, label, li {
 
 .job-detail .roles-detail li {
     padding: 5px 0;
+}
+
+.split-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+}
+
+.panel img {
+    width: 200px;
+    height: 200px;
+}
+
+.panel * {
+    text-align: center;
+}
+
+h2.animated-text {
+    font-size: 60px;
 }
 
 /* Buttons */

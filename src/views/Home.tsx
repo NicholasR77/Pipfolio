@@ -1,6 +1,8 @@
+import React from 'react';
+import { useTypewriter } from 'react-simple-typewriter'
+
 import HomeInfo from '../data/home-info.json';
 import { HomeType } from '../types/Home';
-
 
 export default function Home() {
     const homeInfo:HomeType = HomeInfo;
@@ -14,9 +16,20 @@ export default function Home() {
         );
     })
 
+    const {text} = useTypewriter({
+        words: [ ...homeInfo.typwriter ],
+        loop: 0,
+    })
+
     return (
         <div className="home subpage">
-            { sectionsList }
+            
+            <div className='split-panel'>
+                <div className="panel">{ sectionsList }</div>
+                <div className="panel">
+                    <h2 className="animated-text">{text}</h2>
+                </div>
+            </div>
         </div>
     )
 }
