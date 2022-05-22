@@ -134,6 +134,10 @@ h1, h2 {
     transition: all 0.5s ease;
 }
 
+body {
+    overflow: hidden;
+}
+
 .pipfolio-main {
     margin: 0;
     overflow: hidden;
