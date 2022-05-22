@@ -22,7 +22,7 @@ export default function Bio() {
                     <img src={require('../assets/weirdos.jpg')} alt="My wife and myself"/>
                     <p><em>Me and my lovely wife, Amber.</em></p>
                     <img src={require('../assets/doges.jpg')} alt="My dogs"/>
-                    <p><em>My dogs,Waffles and Jax.</em></p>
+                    <p><em>My dogs, Waffles and Jax.</em></p>
                 </div>
             </div>
         </div>
