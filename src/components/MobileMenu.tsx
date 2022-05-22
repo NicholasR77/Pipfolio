@@ -45,8 +45,8 @@ export default function MobileMenu() {
     
     const listItems = menuLinks.map((item) => {
         return (
-            <React.Fragment>
-                <ListItem key={item.name} component={NavLink} to={item.link} disablePadding>
+            <React.Fragment key={item.name}>
+                <ListItem component={NavLink} to={item.link} disablePadding>
                     <ListItemText primary={item.name} />
                 </ListItem>
                 <Divider color="#71db77" />

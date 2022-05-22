@@ -9,11 +9,11 @@ import Loading from './views/Loading';
 import PipfolioMain from './views/PipfolioMain';
 
 export default  function App() {
-  const [ loaded, setLoaded ] = useState(false);
+  const [ loaded, setLoaded ] = useState(true);
 
-  setTimeout(() => {
-    setLoaded(true);
-  }, 3000);
+  // setTimeout(() => {
+  //   setLoaded(true);
+  // }, 3000);
 
   return (
     <BrowserRouter>
