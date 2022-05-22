@@ -43,24 +43,24 @@ export default function Contact() {
     };
 
   return (
-    <div className='contact-form subpage'>
+    <div className='contact subpage'>
         {!submitted && !errors.length &&
             <React.Fragment>
                 <h2>Reach Out to Me Directly.</h2>
                 <form ref={form} onSubmit={sendEmail}>
-                    <div className='contact-form-row'>
+                    <div className='contact-row'>
                         <label>Name</label>
                         <input type='text' required name='user_name' />
                     </div>
-                    <div className='contact-form-row'>
+                    <div className='contact-row'>
                         <label>Email</label>
                         <input type='email' required name='user_email' />
                     </div>
-                    <div className='contact-form-row'>
+                    <div className='contact-row'>
                         <label>Message</label>
                         <textarea name='message' />
                     </div>
-                    <div className='contact-form-row'>
+                    <div className='contact-row'>
                         <button className='btn' type='submit'>Submit</button>
                     </div>
                 </form>

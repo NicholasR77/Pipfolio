@@ -17,7 +17,7 @@ export default function EducationDetails() {
     const school = schools[schoolName];
     
     return (
-        <div className='education-detail subpage'>
+        <div className='education-details subpage'>
             <h2>{ school.name } | {school.dates}</h2>
             <p>{school.degree} </p>
             <p className='cursor_blink'>{school.description}</p>
