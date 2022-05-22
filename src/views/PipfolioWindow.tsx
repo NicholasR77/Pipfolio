@@ -3,6 +3,7 @@ import {
     Route,
     Navigate
 } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 // Main Views
 import Home from './Home';
@@ -13,6 +14,7 @@ import Contact from './Contact'
 
 // Components
 import MainMenu from '../components/MainMenu';
+import MobileMenu from '../components/MobileMenu';
 import JobDetails from '../components/JobDetails';
 import EducationDetails from '../components/EducationDetails';
 
@@ -20,9 +22,16 @@ import EducationDetails from '../components/EducationDetails';
 import logo from '../assets/Original.svg';
 
 export default function PipfolioWindow() {
+    const isDesktop = useMediaQuery({ query: `(min-width: 1000px)` });
+
     return (
         <div className='pipfolio-window'>
-            <MainMenu />
+            { !isDesktop &&
+                 <MobileMenu />
+            }
+            { isDesktop &&
+                 <MainMenu />
+            }
             <div className='page-wrapper'>
                 <Routes>
                     <Route path='/' element={<Home />}></Route>

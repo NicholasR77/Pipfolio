@@ -5,15 +5,15 @@
 
 /* Fonts */
 
-h1, h2, h3, h4, h5, h6, p, a, input, button, textarea, label, li {
-    font-family: 'Fira Mono', monospace;
+h1, h2, h3, h4, h5, h6, p, a, input, button, textarea, label, li, span {
+    font-family: 'Fira Mono', monospace !important;
     font-size: 14px;
     color: var(--primary-color);
     text-decoration: none;
 }
 
 @media all and (min-width: 1000px) {
-    h1, h2, h3, h4, h5, h6, p, a, input, button, textarea, label, li {
+    h1, h2, h3, h4, h5, h6, p, a, input, button, textarea, label, li, span {
         font-size: 20px;
     }
 }
@@ -232,6 +232,11 @@ h2.animated-text {
     padding-top: 10px;
 }
 
+.mobile-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .main-nav ul, .sub-nav ul {
     display: flex;
     flex-flow: row wrap;
@@ -250,17 +255,19 @@ h2.animated-text {
 .main-nav ul li, .sub-nav ul li {
     text-transform: uppercase;
     font-weight: 900;
+    padding: 5px;
     padding-left: 10px;
 }
 
 @media all and (min-width: 1000px) {
     .main-nav ul li, .sub-nav ul li {
+        padding: 0x;
         padding-left: 20px;
     }
 }
 
 .main-nav ul li a, .sub-nav ul li a {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 @media all and (min-width: 1000px) {
@@ -313,6 +320,18 @@ h2.animated-text {
     .logo-wrapper img {
         width: 300px;
     }
+}
+
+/* MUI */
+
+.MuiDrawer-paper {
+    background: var(--secondary-color) !important;
+}
+
+.MuiListItemText-primary {
+    padding: 10px 0;
+    padding-left: 20px;
+    font-weight: 900 !important;
 }
 
 /* Animations */
