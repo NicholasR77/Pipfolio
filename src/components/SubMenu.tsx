@@ -4,7 +4,7 @@ interface SubMenuProps {
 
 export default function SubMenu(props: SubMenuProps) {
     return (
-        <nav className="sub-nav">
+        <nav className='sub-nav'>
             { props.children }
         </nav>
     )

@@ -8,7 +8,7 @@ export default function Education() {
             <SubMenu>
                 <ul>
                     <li><NavLink className={({ isActive }) => isActive ? 'secondary-active-link' : '' } to='asu'>Arizona State University</NavLink></li>
-                    <li>|</li>
+                    <li className='mobile-tablet-hidden'>|</li>
                     <li><NavLink className={({ isActive }) => isActive ? 'secondary-active-link' : '' } to='flatiron'>Flatiron Schools Bootcamp</NavLink></li>
                 </ul>
             </SubMenu>

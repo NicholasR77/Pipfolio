@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
 
 import './styles/Pipfolio.css';
 import './styles/App.css';
@@ -17,7 +17,7 @@ export default  function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className='App'>
         {!loaded && <Loading />}
         {loaded &&  <PipfolioMain />}
       </div>

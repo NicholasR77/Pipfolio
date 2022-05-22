@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
@@ -48,20 +48,20 @@ export default function Contact() {
             <React.Fragment>
                 <h2>Reach Out to Me Directly.</h2>
                 <form ref={form} onSubmit={sendEmail}>
-                    <div className='contact-form__row'>
+                    <div className='contact-form-row'>
                         <label>Name</label>
-                        <input type="text" required name="user_name" />
+                        <input type='text' required name='user_name' />
                     </div>
-                    <div className='contact-form__row'>
+                    <div className='contact-form-row'>
                         <label>Email</label>
-                        <input type="email" required name="user_email" />
+                        <input type='email' required name='user_email' />
                     </div>
-                    <div className='contact-form__row'>
+                    <div className='contact-form-row'>
                         <label>Message</label>
-                        <textarea name="message" />
+                        <textarea name='message' />
                     </div>
-                    <div className='contact-form__row'>
-                        <button className='btn' type="submit">Submit</button>
+                    <div className='contact-form-row'>
+                        <button className='btn' type='submit'>Submit</button>
                     </div>
                 </form>
             </React.Fragment>

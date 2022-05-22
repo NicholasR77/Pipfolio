@@ -15,13 +15,13 @@ export default function Bio() {
     })
 
     return (
-        <div className="bio subpage">
+        <div className='bio subpage'>
             <div className='split-panel'>
-                <div className="panel">{ sectionsList }</div>
-                <div className="panel">
-                    <img src={require('../assets/weirdos.jpg')} alt="My wife and myself"/>
+                <div className='panel'>{ sectionsList }</div>
+                <div className='panel'>
+                    <img src={require('../assets/weirdos.jpg')} alt='My wife and myself'/>
                     <p><em>Me and my lovely wife, Amber.</em></p>
-                    <img src={require('../assets/doges.jpg')} alt="My dogs"/>
+                    <img src={require('../assets/doges.jpg')} alt='My dogs'/>
                     <p><em>My dogs, Waffles and Jax.</em></p>
                 </div>
             </div>

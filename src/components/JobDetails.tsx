@@ -16,13 +16,13 @@ export default function JobDetails() {
     const jobs: JobsType = Jobs;
     const job = jobs[jobName];
     const roleList = job.roles.map(({ title, dates, descriptions }) => {
-        const descriptionList = descriptions.map((description, index) => {
+        const descriptionList = descriptions.map((description) => {
             return (
                 <li key={description}>{description}</li>
             )
         });
         return (
-            <div className="roles-detail" key={title}>
+            <div className='roles-detail' key={title}>
                 <p>{title} | {dates}</p>
                 <p>Description:</p>
                 <ul>
@@ -33,7 +33,7 @@ export default function JobDetails() {
     });
     
     return (
-        <div className="job-detail subpage">
+        <div className='job-detail subpage'>
             <h2>{ job.name }</h2>
             <p>{ job.description }</p>
             <div className='roles'>

@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #00b100;
+    --primary-color: #71db77;
     --secondary-color: #222;
 }
 
@@ -7,15 +7,27 @@
 
 h1, h2, h3, h4, h5, h6, p, a, input, button, textarea, label, li {
     font-family: 'Fira Mono', monospace;
-    font-size: 20px;
+    font-size: 14px;
     color: var(--primary-color);
     text-decoration: none;
 }
 
+@media all and (min-width: 1000px) {
+    h1, h2, h3, h4, h5, h6, p, a, input, button, textarea, label, li {
+        font-size: 20px;
+    }
+}
+
 h1, h2 {
-    font-size: 32px;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+@media all and (min-width: 1000px) {
+    h1, h2 {
+        font-size: 32px;
+    }
 }
 
 .cursor_blink::after {
@@ -24,6 +36,7 @@ h1, h2 {
 }
 
 /* Main Elements */
+
 #loading {
     width: 100vw;
     height: 100vh;
@@ -64,10 +77,6 @@ h1, h2 {
     z-index: 1;
 }
 
-#loading.transition {
-    background-color: #000;
-}
-
 .pipfolio-window::after, .loading::after {
     background-image: linear-gradient(transparent, transparent 3px, #222);
     background-size: 4px 4px;
@@ -104,9 +113,15 @@ h1, h2 {
 
 .split-panel {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+}
+
+@media all and (min-width: 1000px) {
+    .split-panel {
+        flex-flow: row nowrap;
+    }
 }
 
 .panel {
@@ -115,8 +130,14 @@ h1, h2 {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
     padding: 10px;
+}
+
+@media all and (min-width: 1000px) {
+    .panel {
+        width: 50%;
+    }
 }
 
 .panel img {
@@ -129,7 +150,23 @@ h1, h2 {
 }
 
 h2.animated-text {
-    font-size: 60px;
+    font-size: 30px;
+}
+
+@media all and (min-width: 1000px) {
+    h2.animated-text {
+        font-size: 60px;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .mobile-tablet-hidden {
+        display: none;
+    }
+}
+
+.contact-form h2 {
+    text-align: center;
 }
 
 /* Buttons */
@@ -157,48 +194,79 @@ h2.animated-text {
     align-items: center;
 }
 
-.contact-form__row {
-    width: 400px;
+.contact-form-row {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     margin-bottom: 20px;
 }
 
-.contact-form__row label, .contact-form__row input, .contact-form__row textarea {
+@media all and (min-width: 1000px) {
+    .contact-form-row {
+        width: 400px;
+    }
+}s
+
+.contact-form-row label, .contact-form-row input, .contact-form-row textarea {
     width: 100%;
 }
 
-.contact-form__row label {
+.contact-form-row label {
     text-align: center;
     margin-bottom: 5px;
 }
 
-.contact-form__row input, .contact-form__row textarea {
+.contact-form-row input, .contact-form-row textarea {
     border: var(--primary-color) solid 2px;
     background: var(--secondary-color);
 }
 
 /* Nav */
+
 .main-nav {
     padding-bottom: 5px;
     border-bottom: var(--primary-color) solid 2px;
 }
 
+.sub-nav {
+    padding-top: 10px;
+}
+
 .main-nav ul, .sub-nav ul {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: center;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+@media all and (min-width: 1000px) {
+    .main-nav ul, .sub-nav ul {
+        justify-content: flex-start;
+    }
+}
+
 .main-nav ul li, .sub-nav ul li {
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 26px;
-    padding-left: 20px;
+    padding-left: 10px;
+}
+
+@media all and (min-width: 1000px) {
+    .main-nav ul li, .sub-nav ul li {
+        padding-left: 20px;
+    }
+}
+
+.main-nav ul li a, .sub-nav ul li a {
+    font-size: 12px;
+}
+
+@media all and (min-width: 1000px) {
+    .main-nav ul li a, .sub-nav ul li a {
+        font-size: 20px;
+    }
 }
 
 .main-nav ul li:first-child, .sub-nav li {
@@ -213,12 +281,14 @@ h2.animated-text {
     font-weight: 500;
 }
 
-.primary-active-link {
-    border: var(--primary-color) 2px solid;
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    cursor: pointer;
-    padding: 5px 10px;
+@media all and (min-width: 1000px) {
+    .primary-active-link {
+        border: var(--primary-color) 2px solid;
+        background: var(--primary-color);
+        color: var(--secondary-color);
+        cursor: pointer;
+        padding: 5px 10px;
+    }
 }
 
 .secondary-active-link {
@@ -226,7 +296,27 @@ h2.animated-text {
     text-decoration: underline;
 }
 
+.logo-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-wrapper img {
+    width: 150px;
+}
+
+@media all and (min-width: 1000px) {
+    .logo-wrapper img {
+        width: 300px;
+    }
+}
+
 /* Animations */
+
 @keyframes colorPulse {
     0%, 100% {
         color: #0c0;

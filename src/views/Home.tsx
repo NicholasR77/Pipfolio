@@ -22,12 +22,11 @@ export default function Home() {
     })
 
     return (
-        <div className="home subpage">
-            
+        <div className='home subpage'>
             <div className='split-panel'>
-                <div className="panel">{ sectionsList }</div>
-                <div className="panel">
-                    <h2 className="animated-text">{text}</h2>
+                <div className='panel'>{ sectionsList }</div>
+                <div className='panel'>
+                    <h2 className='animated-text'>{text}</h2>
                 </div>
             </div>
         </div>
