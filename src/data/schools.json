@@ -3,12 +3,12 @@
         "name": "Arizona State University",
         "degree": "Bachelors of Science in Technological Entrepreneurship and Management",
         "dates": "2013 - 2017",
-        "description": "Lorem ipsum"
+        "description": "Focused on entrepreneurship and management in existing and emerging technology fields. Received a foundation in technology and business fundamentals, with an emphasis on entrepreneurship and innovation in areas such as: operations management, process innovation and process improvement, product development, and social entrepreneurship."
     },
     "flatiron": {
         "name": "Flatiron Schools Bootcamp",
         "degree": "Computer Software Engineering",
         "dates": "2020 - 2021",
-        "description": "Lorem ipsum"
+        "description": "Explored software engineering with various concepts including, but not limited to: objected-oriented programming, data structures, API development, single page applications, and more. Some technologies we used include: Ruby, Sinatra, Rails, JavaScript, React, Node.js, SQL, and more."
     }
 }
