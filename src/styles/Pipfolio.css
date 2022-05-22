@@ -224,7 +224,6 @@ h2.animated-text {
 /* Nav */
 
 .main-nav {
-    padding-bottom: 5px;
     border-bottom: var(--primary-color) solid 2px;
 }
 
@@ -235,6 +234,9 @@ h2.animated-text {
 .mobile-nav {
     display: flex;
     justify-content: flex-end;
+    top: 10px;
+    right: 25px;
+    position: absolute;
 }
 
 .main-nav ul, .sub-nav ul {
@@ -316,7 +318,13 @@ h2.animated-text {
     width: 150px;
 }
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 4000px) {
+    .logo-wrapper img {
+        width: 200px;
+    }
+}
+
+@media all and (min-width: 700px) {
     .logo-wrapper img {
         width: 300px;
     }

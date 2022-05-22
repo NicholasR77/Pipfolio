@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
@@ -9,9 +10,17 @@ import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
 import ListItemText from '@mui/material/ListItemText';
 
-type Anchor = 'top' | 'left' | 'bottom' | 'right';
+import { MenuLink } from '../types/MenuLink';
 
 export default function MobileMenu() {
+    const menuLinks: MenuLink[] = [
+        { link: '/', name: 'Home' },
+        { link: '/bio', name: 'Bio' },
+        { link: '/experience', name: 'Experience' },
+        { link: '/education', name: 'Education' },
+        { link: '/contact', name: 'Contact' }
+    ]
+
     const [state, setState] = useState({
         top: false,
         left: false,
@@ -21,7 +30,7 @@ export default function MobileMenu() {
 
 
     const toggleDrawer =
-        (anchor: Anchor, open: boolean) =>
+        (anchor: string, open: boolean) =>
         (event: React.KeyboardEvent | React.MouseEvent) => {
         if (
             event.type === 'keydown' &&
@@ -33,8 +42,19 @@ export default function MobileMenu() {
 
         setState({ ...state, [anchor]: open })
     };
+    
+    const listItems = menuLinks.map((item) => {
+        return (
+            <React.Fragment>
+                <ListItem key={item.name} component={NavLink} to={item.link} disablePadding>
+                    <ListItemText primary={item.name} />
+                </ListItem>
+                <Divider color="#71db77" />
+            </React.Fragment>
+        )
+    })
 
-    const list = (anchor: Anchor) => (
+    const list = (anchor: string) => (
         <Box
             sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
             role="presentation"
@@ -42,26 +62,7 @@ export default function MobileMenu() {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                <ListItem component={NavLink} to={'/'} disablePadding>
-                    <ListItemText primary={'Home'} />
-                </ListItem>
-                <Divider color="#71db77" />
-                <ListItem component={NavLink} to={'/bio'} disablePadding>
-                    <ListItemText primary={'Bio'} />
-                </ListItem>
-                <Divider color="#71db77" />
-                <ListItem component={NavLink} to={'/experience'} disablePadding>
-                    <ListItemText primary={'Experience'} />
-                </ListItem>
-                <Divider color="#71db77" />
-                <ListItem component={NavLink} to={'/education'} disablePadding>
-                    <ListItemText primary={'Education'} />
-                </ListItem>
-                <Divider color="#71db77" />
-                <ListItem component={NavLink} to={'/contact'} disablePadding>
-                    <ListItemText primary={'Contact'} />
-                </ListItem>
-                <Divider color="#71db77" />
+                {listItems}
             </List>
         </Box>
     );

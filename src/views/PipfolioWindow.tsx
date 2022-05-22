@@ -26,6 +26,7 @@ export default function PipfolioWindow() {
 
     return (
         <div className='pipfolio-window'>
+            <div className='logo-wrapper'><img src={logo} alt='Logo'/></div>
             { !isDesktop &&
                  <MobileMenu />
             }
@@ -47,7 +48,6 @@ export default function PipfolioWindow() {
                     <Route path='contact' element={<Contact />}></Route>
                 </Routes>
             </div>
-            <div className='logo-wrapper'><img src={logo} alt='Logo'/></div>
         </div>
     )
 };
