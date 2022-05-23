@@ -1,8 +1,11 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
-import { MenuLink } from '../types/MenuLink';
+// Components
 import SubMenu from '../components/SubMenu'
+
+// Types
+import { MenuLink } from '../types/MenuLink';
 
 export default function Experience() {
     const menuLinks: MenuLink[] = [
@@ -19,7 +22,7 @@ export default function Experience() {
                 <li><NavLink className={({ isActive }) => isActive ? 'secondary-active-link' : '' } to={item.link}>{item.name}</NavLink></li>
                 { index + 1 < menuLinks.length && <li className='mobile-tablet-hidden'>|</li> }
             </React.Fragment>
-        )
+        );
     });
     return (
         <div className='experience'>
@@ -30,5 +33,5 @@ export default function Experience() {
             </SubMenu>
             <Outlet />
         </div>
-    )
+    );
 }

@@ -1,3 +1,4 @@
+// Components
 import PipfolioWindow from './PipfolioWindow';
 
 export default function PipfolioMain() {
@@ -5,5 +6,5 @@ export default function PipfolioMain() {
         <main className='pipfolio-main'>
             <PipfolioWindow />
         </main>
-    )
+    );
 }

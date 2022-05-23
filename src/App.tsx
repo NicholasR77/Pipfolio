@@ -9,18 +9,18 @@ import Loading from './views/Loading';
 import PipfolioMain from './views/PipfolioMain';
 
 export default  function App() {
-  const [ loaded, setLoaded ] = useState(false);
+    const [ loaded, setLoaded ] = useState(false);
 
-  setTimeout(() => {
-    setLoaded(true);
-  }, 6000);
+    setTimeout(() => {
+        setLoaded(true);
+    }, 6000);
 
-  return (
-    <BrowserRouter>
-      <div className='App'>
-        {!loaded && <Loading />}
-        {loaded &&  <PipfolioMain />}
-      </div>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <div className='App'>
+                {!loaded && <Loading />}
+                {loaded &&  <PipfolioMain />}
+            </div>
+        </BrowserRouter>
+    );
 };

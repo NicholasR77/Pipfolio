@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
+// Types
 import { MenuLink } from '../types/MenuLink';
 
 export default function MainMenu() {
@@ -14,13 +15,14 @@ export default function MainMenu() {
     const listItems = menuLinks.map((item) => {
         return (
             <li key={item.name}><NavLink className={({ isActive }) => isActive ? 'primary-active-link' : '' } to={item.link}>{item.name}</NavLink></li>
-        )
-    })
+        );
+    });
+
     return (
         <nav className='main-nav'>
             <ul>
                 {listItems}
             </ul>
         </nav>
-    )
+    );
 }

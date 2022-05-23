@@ -140,7 +140,7 @@ h1, h2 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 30vh;
+    height: 10vh;
 }
 
 .loading-bottom {
@@ -148,7 +148,20 @@ h1, h2 {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    height: 70vh;
+}
+
+#scroll-text {
+    height: 100%;
+    text-align: center;
+    
+    /* animation properties */
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    
+    -moz-animation: scroll-animation 3s linear infinite;
+    -webkit-animation: scroll-animation 3s linear infinite;
+    animation: scroll-animation 3s linear infinite;
 }
 
 body {
@@ -408,42 +421,27 @@ h2.animated-text {
     }
 }
 
-
-#scroll-text {
-    height: 100%;
-    text-align: center;
-    
-    /* animation properties */
-    -moz-transform: translateY(100%);
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    
-    -moz-animation: my-animation 3s linear infinite;
-    -webkit-animation: my-animation 3s linear infinite;
-    animation: my-animation 3s linear infinite;
-  }
-
 /* for Firefox */
-@-moz-keyframes my-animation {
+@-moz-keyframes scroll-animation {
     from { -moz-transform: translateY(100%); }
     to { -moz-transform: translateY(-100%); }
-  }
+}
   
-  /* for Chrome */
-  @-webkit-keyframes my-animation {
+/* for Chrome */
+@-webkit-keyframes scroll-animation {
     from { -webkit-transform: translateY(100%); }
     to { -webkit-transform: translateY(-100%); }
-  }
+}
   
-  @keyframes my-animation {
+@keyframes scroll-animation {
     from {
-      -moz-transform: translateY(100%);
-      -webkit-transform: translateY(100%);
-      transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
     }
     to {
-      -moz-transform: translateY(-100%);
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
     }
-  }
+}

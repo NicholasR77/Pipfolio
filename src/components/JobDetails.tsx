@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 // Types
 import { JobsType } from '../types/Jobs';
 
-// Job Data
+// JSON Data
 import Jobs from '../data/jobs.json';
 
 export default function JobDetails() {
@@ -19,8 +19,9 @@ export default function JobDetails() {
         const descriptionList = descriptions.map((description) => {
             return (
                 <li key={description}>{description}</li>
-            )
+            );
         });
+
         return (
             <div className='roles-details' key={title}>
                 <p>{title} | {dates}</p>
@@ -34,11 +35,11 @@ export default function JobDetails() {
     
     return (
         <div className='job-details subpage'>
-            <h2>{ job.name }</h2>
-            <p>{ job.description }</p>
+            <h2>{job.name}</h2>
+            <p>{job.description}</p>
             <div className='roles'>
-                { roleList }
+                {roleList}
             </div>
         </div>
-    )
+    );
 }

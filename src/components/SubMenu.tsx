@@ -7,5 +7,5 @@ export default function SubMenu(props: SubMenuProps) {
         <nav className='sub-nav'>
             { props.children }
         </nav>
-    )
+    );
 }

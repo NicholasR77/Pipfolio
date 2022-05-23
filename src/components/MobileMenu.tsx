@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
+// MUI
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import Hamburger from 'hamburger-react'
+import Hamburger from 'hamburger-react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
 import ListItemText from '@mui/material/ListItemText';
 
+// Types
 import { MenuLink } from '../types/MenuLink';
 
 export default function MobileMenu() {
@@ -19,7 +21,7 @@ export default function MobileMenu() {
         { link: '/experience', name: 'Experience' },
         { link: '/education', name: 'Education' },
         { link: '/contact', name: 'Contact' }
-    ]
+    ];
 
     const [state, setState] = useState({
         top: false,
@@ -49,7 +51,7 @@ export default function MobileMenu() {
                 <ListItem component={NavLink} to={item.link} disablePadding>
                     <ListItemText primary={item.name} />
                 </ListItem>
-                <Divider color="#71db77" />
+                <Divider color='#71db77' />
             </React.Fragment>
         )
     })
@@ -57,7 +59,7 @@ export default function MobileMenu() {
     const list = (anchor: string) => (
         <Box
             sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-            role="presentation"
+            role='presentation'
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
@@ -71,7 +73,7 @@ export default function MobileMenu() {
         <div className='mobile-nav'>
             {(['left'] as const).map((anchor) => (
                 <React.Fragment key={anchor}>
-                    <IconButton onClick={toggleDrawer(anchor, true)}><Hamburger toggled={state[anchor]} color="#71db77" /></IconButton>
+                    <IconButton onClick={toggleDrawer(anchor, true)}><Hamburger toggled={state[anchor]} color='#71db77' /></IconButton>
                     <Drawer
                         anchor={anchor}
                         open={state[anchor]}

@@ -42,36 +42,36 @@ export default function Contact() {
         }
     };
 
-  return (
-    <div className='contact subpage'>
-        {!submitted && !errors.length &&
-            <React.Fragment>
-                <h2>Reach Out to Me Directly.</h2>
-                <form ref={form} onSubmit={sendEmail}>
-                    <div className='contact-row'>
-                        <label>Name</label>
-                        <input type='text' required name='user_name' />
-                    </div>
-                    <div className='contact-row'>
-                        <label>Email</label>
-                        <input type='email' required name='user_email' />
-                    </div>
-                    <div className='contact-row'>
-                        <label>Message</label>
-                        <textarea name='message' />
-                    </div>
-                    <div className='contact-row'>
-                        <button className='btn' type='submit'>Submit</button>
-                    </div>
-                </form>
-            </React.Fragment>
-        }
-        {submitted &&  
-            <p>Thanks for reaching out - I'll get back to you as soon as I can. Have a great day!</p>
-        }
-        {errors.length > 0 &&
-            <p>Uh oh. You broke the site somehow. It's cool though. Reach out to me directly via nl7robbins@icloud.com. Thanks!</p>
-        }
-    </div>
-  );
+    return (
+        <div className='contact subpage'>
+            {!submitted && !errors.length &&
+                <React.Fragment>
+                    <h2>Reach Out to Me Directly.</h2>
+                    <form ref={form} onSubmit={sendEmail}>
+                        <div className='contact-row'>
+                            <label>Name</label>
+                            <input type='text' required name='user_name' />
+                        </div>
+                        <div className='contact-row'>
+                            <label>Email</label>
+                            <input type='email' required name='user_email' />
+                        </div>
+                        <div className='contact-row'>
+                            <label>Message</label>
+                            <textarea name='message' />
+                        </div>
+                        <div className='contact-row'>
+                            <button className='btn' type='submit'>Submit</button>
+                        </div>
+                    </form>
+                </React.Fragment>
+            }
+            {submitted &&  
+                <p>Thanks for reaching out - I'll get back to you as soon as I can. Have a great day!</p>
+            }
+            {errors.length > 0 &&
+                <p>Uh oh. You broke the site somehow. It's cool though. Reach out to me directly via nl7robbins@icloud.com. Thanks!</p>
+            }
+        </div>
+    );
 };

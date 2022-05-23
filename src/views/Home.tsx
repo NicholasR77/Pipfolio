@@ -1,7 +1,10 @@
 import React from 'react';
 import { useTypewriter } from 'react-simple-typewriter'
 
+// JSON
 import HomeInfo from '../data/home-info.json';
+
+// Types
 import { HomeType } from '../types/Home';
 
 export default function Home() {
@@ -14,12 +17,12 @@ export default function Home() {
                 <p className={ index === sectionLength -1 ? 'cursor_blink' : ''}>{section}</p>
             </div>
         );
-    })
+    });
 
     const {text} = useTypewriter({
         words: [ ...homeInfo.typwriter ],
         loop: 0,
-    })
+    });
 
     return (
         <div className='home subpage'>
@@ -30,5 +33,5 @@ export default function Home() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
