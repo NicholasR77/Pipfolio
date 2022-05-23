@@ -50,8 +50,8 @@ h1, h2 {
 .mobile-nav {
     display: flex;
     justify-content: flex-end;
-    top: 10px;
-    right: 25px;
+    top: 0;
+    right: 0;
     position: absolute;
 }
 
@@ -153,6 +153,12 @@ body {
     overflow: scroll;
     padding: 10vmin;
     width: 100vw;
+}
+
+@media all and (max-width: 1000px) {
+    .pipfolio-window {
+        padding-bottom: 80px;
+    }
 }
 
 .pipfolio-window::before, #loading.transition::before {
