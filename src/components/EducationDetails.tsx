@@ -18,7 +18,7 @@ export default function EducationDetails() {
     
     return (
         <div className='education-details subpage'>
-            <h2>{ school.name } | {school.dates}</h2>
+            <h2>{ school.name } <br />{school.dates}</h2>
             <p>{school.degree} </p>
             <p className='cursor_blink'>{school.description}</p>
         </div>
