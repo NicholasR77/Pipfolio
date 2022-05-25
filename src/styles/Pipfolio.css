@@ -355,6 +355,24 @@ h2.animated-text {
     text-align: center;
 }
 
+.stats-details .split-panel {
+    flex-flow: row nowrap;
+    border: 2px solid var(--primary-color);
+}
+
+.stats-details .panel {
+   padding: 0;
+}
+
+.stats-details .split-panel .panel:first-child {
+    align-items: flex-start;
+    width: auto;
+}
+
+.stats-details .split-panel .panel:last-child {
+    width: 100%;
+}
+
 /* Buttons */
 
 .btn {

@@ -1,0 +1,27 @@
+{
+    "languages": {
+        "name": "Languages",
+        "subStats": [
+            {  
+                "name": "Ruby",
+                "level": "Intermediate" 
+            },
+            {  
+                "name": "JavaScript",
+                "level": "Intermediate"
+            },
+            {  
+                "name": "JavaScript",
+                "level": "Intermediate"
+            },
+            {  
+                "name": "JavaScript",
+                "level": "Intermediate"
+            },
+            {  
+                "name": "JavaScript",
+                "level": "Intermediate"
+            }
+        ]
+    }
+}

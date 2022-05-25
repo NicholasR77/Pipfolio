@@ -8,6 +8,7 @@ import { useMediaQuery } from 'react-responsive';
 // Main Views
 import Home from './Home';
 import Bio from './Bio';
+import Stats from './Stats';
 import Experience from './Experience';
 import Education from './Education';
 import Contact from './Contact'
@@ -17,6 +18,7 @@ import MainMenu from '../components/MainMenu';
 import MobileMenu from '../components/MobileMenu';
 import JobDetails from '../components/JobDetails';
 import EducationDetails from '../components/EducationDetails';
+import StatsDetails from '../components/StatsDetails';
 
 // Assets
 import logo from '../assets/Original.svg';
@@ -37,6 +39,10 @@ export default function PipfolioWindow() {
                 <Routes>
                     <Route path='/' element={<Home />}></Route>
                     <Route path='bio' element={<Bio />}></Route>
+                    <Route path='stats' element={<Stats />}>
+                        <Route index element={<Navigate to='languages' />} />
+                        <Route path=':statName' element={<StatsDetails />} />
+                    </Route>
                     <Route path='experience' element={<Experience />}>
                         <Route index element={<Navigate to='roll20' />} />
                         <Route path=':jobName' element={<JobDetails />} />
