@@ -254,7 +254,7 @@ body {
     height: 200px;
 }
 
-.panel * {
+.panel h2, .panel p {
     text-align: center;
 }
 
@@ -355,22 +355,53 @@ h2.animated-text {
     text-align: center;
 }
 
-.stats-details .split-panel {
+.skills .split-panel {
     flex-flow: row nowrap;
-    border: 2px solid var(--primary-color);
 }
 
-.stats-details .panel {
+@media all and (min-width: 500px) {
+    .skills .split-panel {
+        border: 2px solid var(--primary-color);
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .skills .split-panel {
+        border-top: none;
+    }
+}
+
+.skills .panel {
    padding: 0;
 }
 
-.stats-details .split-panel .panel:first-child {
+.skills .split-panel .panel:first-child {
     align-items: flex-start;
     width: auto;
 }
 
-.stats-details .split-panel .panel:last-child {
+.skills .split-panel .panel:last-child {
     width: 100%;
+    padding: 10px;
+}
+
+@media all and (min-width: 500px) {
+    .skills .MuiTabs-root {
+        border-right: 2px solid var(--primary-color);
+    }
+}
+
+.skills .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    color: var(--primary-color);
+}
+
+.skills .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.skills .css-10d9dml-MuiTabs-indicator {
+    background-color: #000;
 }
 
 /* Buttons */

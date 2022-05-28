@@ -1,57 +1,58 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
 // Types
-import { StatsType } from '../types/Stats';
+import { SkillType } from '../types/Skills';
 
 // JSON Data
-import Stats from '../data/stats-info.json';
+import SkillsWrapper from '../data/skills-info.json';
 
-export default function StatsDetails() {
-    let { statName } = useParams();
-
+export default function Skills() {
     const [value, setValue] = useState(0);
 
-    if (statName === undefined) {
-        return null;
-    }
+    const skills = SkillsWrapper['skills'];
 
-    const stats: StatsType = Stats;
-    const stat = stats[statName];
-
-    const subStatsList = stat.subStats.map((item, index) => {
+    const tabsList = skills.map((stat: SkillType, index) => {
         return (
-            <Tab label={item.name} key={index} />
+            <Tab label={stat.name} key={index} />
         )
-    })
+    });
+
+    const skillDescriptions = skills[value].descriptions.map((description) => {
+        return (
+            <li key={description}>{description}</li>   
+        )
+    });
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
 
     return (
-        <div className='stats-details subpage'>
+        <div className='skills'>
             <div className='split-panel'>
                 <div className='panel'>
-                    <Box sx={{ bgcolor: '#71db77' }}>
+                    <Box>
                         <Tabs
                             value={value}
                             onChange={handleChange}
-                            variant="scrollable"
+                            variant='scrollable'
                             orientation='vertical'
                             scrollButtons
                             allowScrollButtonsMobile
-                            aria-label={`${statName} Scroll Bar`}
+                            aria-label={`Skills Scroll Bar`}
                         >
-                            {subStatsList}
+                            {tabsList}
                         </Tabs>
                     </Box>
                 </div>
                 <div className='panel'>
-                    <p>{stat.subStats[value].name}</p>
+                    <h2>{skills[value].name}</h2>
+                    <ul>
+                        {skillDescriptions}
+                    </ul>
                 </div>
             </div>
         </div>

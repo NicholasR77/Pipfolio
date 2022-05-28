@@ -1,0 +1,71 @@
+{
+    "skills": [
+        {  
+            "name": "Languages",
+            "descriptions": [
+                "Ruby",
+                "Javascript",
+                "HTML",
+                "CSS"
+            ]
+        },
+        {  
+            "name": "Libraries",
+            "descriptions": [
+                "Typescript",
+                "Vue/Vuex",
+                "React/Redux",
+                "jQuery",
+                "GraphQL",
+                "Sass"
+            ]
+        },
+        {
+            "name": "Frameworks",
+            "descriptions": [
+                "Node",
+                "Express",
+                "Rails",
+                "Padrino",
+                "Sinatra"
+            ]
+        },
+        {  
+            "name": "ORMs",
+            "descriptions": [
+                "Mongoose",
+                "DataMapper",
+                "Active Record"
+            ]
+        },
+        {  
+            "name": "Databases",
+            "descriptions": [
+                "MongoDB",
+                "PostgresSQL",
+                "MySQL",
+                "Firebase"
+            ]
+        },
+        {  
+            "name": "Testing",
+            "descriptions": [
+                "Rspec",
+                "Jest",
+                "Cypress"
+            ]
+        },
+        {  
+            "name": "Other",
+            "descriptions": [
+                "GitHub",
+                "GitHub Actions",
+                "Docker",
+                "Jira",
+                "Confluence",
+                "Photoshop",
+                "Figma"
+            ]
+        }
+    ]
+}
