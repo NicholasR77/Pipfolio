@@ -391,16 +391,16 @@ h2.animated-text {
     }
 }
 
-.skills .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+.skills .MuiTab-root {
     color: var(--primary-color) !important;
 }
 
-.skills .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+.skills .MuiTab-root.Mui-selected {
     background-color: var(--primary-color) !important;
     color: var(--secondary-color) !important;
 }
 
-.skills .css-10d9dml-MuiTabs-indicator {
+.skills .MuiTabs-indicator {
     background-color: #000 !important;
 }
 
