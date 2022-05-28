@@ -18,7 +18,7 @@ export default function MobileMenu() {
     const menuLinks: MenuLink[] = [
         { link: '/', name: 'Home' },
         { link: '/bio', name: 'Bio' },
-        { link: '/stats', name: 'Stats' },
+        { link: '/skills', name: 'Skills' },
         { link: '/experience', name: 'Experience' },
         { link: '/education', name: 'Education' },
         { link: '/contact', name: 'Contact' }
