@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import CodeIcon from '@mui/icons-material/Code';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import FoundationIcon from '@mui/icons-material/Foundation';
+import SourceIcon from '@mui/icons-material/Source';
+import StorageIcon from '@mui/icons-material/Storage';
+import BiotechIcon from '@mui/icons-material/Biotech';
+import AddBoxIcon from '@mui/icons-material/AddBox';
 
 // Types
 import { SkillType } from '../types/Skills';
@@ -26,6 +33,18 @@ export default function Skills() {
         )
     });
 
+    const skillName = skills[value].name;
+
+    const skillsToIcon: { [key: string ]: any } = {
+        Languages: <CodeIcon />,
+        Libraries: <LibraryBooksIcon />,
+        Frameworks: <FoundationIcon />,
+        ORMs: <SourceIcon />,
+        Databases: <StorageIcon />,
+        Testing: <BiotechIcon />,
+        Other: <AddBoxIcon />
+    };
+
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
@@ -49,7 +68,8 @@ export default function Skills() {
                     </Box>
                 </div>
                 <div className='panel'>
-                    <h2>{skills[value].name}</h2>
+                    { skillsToIcon[skillName] }
+                    <h2>{skillName}</h2>
                     <ul>
                         {skillDescriptions}
                     </ul>

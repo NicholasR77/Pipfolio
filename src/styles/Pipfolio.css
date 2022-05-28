@@ -404,6 +404,11 @@ h2.animated-text {
     background-color: #000;
 }
 
+.skills .MuiSvgIcon-root {
+    font-size: 60px;
+    color: var(--primary-color);
+}
+
 /* Buttons */
 
 .btn {
